@@ -1,5 +1,3 @@
-
-
 // Define a data structure to store currency rates with USD as base currency
 let currencyRates = {
 	"USD": 1,
@@ -23,6 +21,33 @@ let currencyRates = {
 	"BRL": null,
 	"DKK": null,
 	// Add other currencies here
+};
+
+// Dictionary mapping currency codes to their full names
+const currencyNames = {
+  "USD": "United States Dollar",
+  "EUR": "Euro",
+  "JPY": "Japanese Yen",
+  "GBP": "British Pound Sterling",
+  "AUD": "Australian Dollar",
+  "CAD": "Canadian Dollar",
+  "CHF": "Swiss Franc",
+  "CNY": "Chinese Yuan",
+  "HKD": "Hong Kong Dollar",
+  "NZD": "New Zealand Dollar",
+  "SEK": "Swedish Krona",
+  "KRW": "South Korean Won",
+  "SGD": "Singapore Dollar",
+  "NOK": "Norwegian Krone",
+  "MXN": "Mexican Peso",
+  "INR": "Indian Rupee",
+  "RUB": "Russian Ruble",
+  "ZAR": "South African Rand",
+  "BRL": "Brazilian Real",
+  "TRY": "Turkish Lira",
+  "TWD": "New Taiwan Dollar",
+  "DKK": "Danish Krone"
+  // Add more currencies as needed
 };
 
 // Function to fetch currency rates
@@ -62,37 +87,6 @@ for (const currency in currencyRates) {
 	console.log(`${currency}: ${currencyRates[currency]}`);
 }
 
-
-
-
-
-// Dictionary mapping currency codes to their full names
-const currencyNames = {
-  "USD": "United States Dollar",
-  "EUR": "Euro",
-  "JPY": "Japanese Yen",
-  "GBP": "British Pound Sterling",
-  "AUD": "Australian Dollar",
-  "CAD": "Canadian Dollar",
-  "CHF": "Swiss Franc",
-  "CNY": "Chinese Yuan",
-  "HKD": "Hong Kong Dollar",
-  "NZD": "New Zealand Dollar",
-  "SEK": "Swedish Krona",
-  "KRW": "South Korean Won",
-  "SGD": "Singapore Dollar",
-  "NOK": "Norwegian Krone",
-  "MXN": "Mexican Peso",
-  "INR": "Indian Rupee",
-  "RUB": "Russian Ruble",
-  "ZAR": "South African Rand",
-  "BRL": "Brazilian Real",
-  "TRY": "Turkish Lira",
-  "TWD": "New Taiwan Dollar",
-  "DKK": "Danish Krone"
-  // Add more currencies as needed
-};
-
 // Function to populate dropdown with currencies
 function populateDropdowns() {
   const dropdown1 = document.getElementById("currencyDropdown1");
@@ -117,7 +111,6 @@ function populateDropdowns() {
 
 // Call function to populate dropdowns initially
 populateDropdowns();
-
 
 // Function to add trailing zeros to a number
 function addTrailingZeros(input) {
@@ -145,7 +138,6 @@ function calculateCurrencyAmount(inputId, dropdown1Id, dropdown2Id) {
 		document.getElementById("currencyAmount1").value = calculatedAmount.toFixed(2);
 	}
 }
-
 
 // Get all number input elements
 const numberInputs = document.querySelectorAll(".number-input");
