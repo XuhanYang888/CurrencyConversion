@@ -107,6 +107,12 @@ function populateDropdowns() {
 	dropdown1.appendChild(option1);
 	dropdown2.appendChild(option2);
   }
+  dropdown1.addEventListener("blur", function() {
+	calculateCurrencyAmount("currencyAmount1", "currencyDropdown1", "currencyDropdown2");
+  });  
+  dropdown2.addEventListener("blur", function() {
+	calculateCurrencyAmount("currencyAmount2", "currencyDropdown1", "currencyDropdown2");
+  });
 }
 
 // Call function to populate dropdowns initially
