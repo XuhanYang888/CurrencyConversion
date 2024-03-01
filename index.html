@@ -4,23 +4,7 @@
 	<link href="style.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-	<div class="grid-container">
-		<div class="item1">
-			<p class="title">ISU Part 3</p>
-			<table style="width: 100%; margin: auto;">
-				<tr><td>
-					<button onclick="showContent('content1')">Currency Converter</button>
-				</td></tr>
-				<tr><td>
-					<button onclick="showContent('content2')">Interest Calculator</button>
-				</td></tr>
-			</table>
-		</div>
-		<div class="item2">
-
-
-
-			<div class="content content1" style="display: none;">
+	<div class="content content1" style="display: none;">
 				<p class="title">Currency Converter</p>
 				<div>
 					<table>
@@ -49,119 +33,6 @@
 				</div>
 			</div>
 
-
-
-			<div class="content content2" style="display: none;">
-				<p class="title">Interest Calculator</p>
-				<div>
-					<table>
-						<tr>
-							<td>
-								<label>Select Interest Type:</label>
-							</td>
-							<td>
-								<label><input type="radio" id="simpleInterest" name="type" checked>
-									 Simple</label>
-							</td>
-							<td id="simpleError">
-								<p></p>
-							</td>
-						</tr>
-						<tr>
-							<td></td>
-							<td>
-								<label><input type="radio" id="compoundInterest" name="type">
-									 Compound</label>
-							</td>
-							<td id="compoundError">
-								<p></p>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<label>Principal Amount ($):</label>
-							</td>
-							<td>
-								<input type="number" class="number-input" id="principalAmount" step="0.01">
-							</td>
-							<td id="principalError">
-								<p></p>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<label>Interest Rate (%):</label>
-							</td>
-							<td>
-								<input type="number" class="number-input" id="interestRate" step="0.01">
-							</td>
-							<td id="rateError">
-								<p></p>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<label>Interest Frequency:</label>
-							</td>
-							<td>
-								<select id="interestFreq" tabindex="1">
-									<option value="Annually">Annually</option>
-									<option value="Semiannually">Semiannually</option>
-									<option value="Quarterly">Quarterly</option>
-									<option value="Monthly">Monthly</option>
-								</select>
-							</td>
-							<td id="freqError">
-								<p></p>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<label>Duration (years):</label>
-							</td>
-							<td>
-								<input type="number" class="number-input" id="duration" step="1">
-							</td>
-							<td id="durationError">
-								<p></p>
-							</td>
-						</tr>
-					</table>
-				</div>
-
-				<button id="calculateButton" onclick="calculateInterest()" style="width:125px;">Calculate</button>
-				<br>
-				<br>
-
-			</div>
-		</div>
-
-
-		<div class="item3">
-			<p class="title">Results</p>
-			<div id="results" style="margin: 0px;">
-				<table class='resultTable'><tr><th>Year</th><th>Interest</th><th>Total Amount</th></tr>
-					<?php 
-					for ( $i = 1; $i <= 15; $i++ ) {
-						echo "
-							<tr>
-							<td style='text-align: center;'>$i</td>
-							<td style='text-align: right;'>$0.00</td>
-							<td style='text-align: right;'>$0.00</td>
-							</tr>
-							";
-					}
-					?>
-				</table>
-			</div>
-			</div>
-		</div>
-
-	</div>
 	<script src="script.js"></script>
-	<script src="money.js"></script>
-	<script type="text/javascript">
-
-	</script>
 </body>
 </html>
